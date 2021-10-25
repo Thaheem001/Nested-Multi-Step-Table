@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- created By Arsl Thaheem (Front END Developer)
++92-344-5982251 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
+    <title>Nested Table</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .child-row.active>.hidden {
+            display: flex !important;
+        }
+
+        .click {
+            cursor: pointer;
+            width: 50px !important;
+            background-color: transparent !important;
+        }
+
+        .click i {
+            transition: all .5s;
+        }
+
+        .rot90 {
+            transform: rotate(90deg);
+        }
+
+        .child-roww2 {
+            width: 95% !important;
+            margin-left: 5% !important;
+        }
+
+        .child-roww3 {
+            width: 90% !important;
+            margin-left: 10% !important;
+        }
+
+        .child-roww4 {
+            width: 85% !important;
+            margin-left: 15% !important;
+        }
+
+        .leftBorder div:first-child {
+            position: relative;
+        }
+
+        .leftBorder div:first-child::before {
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            border-left: 2px dotted white;
+            border-bottom: 2px dotted white;
+        }
+
+
+
+        #header2.leftBorder div:first-child::before {
+            width: 28px;
+            height: 30px;
+            left: -36px;
+            top: -6px;
+        }
+
+        #header3.leftBorder div:first-child::before {
+            width: 28px;
+            height: 23px;
+            left: -36px;
+            top: 5px;
+        }
+
+        #header4.leftBorder div:first-child::before {
+            width: 28px;
+            height: 23px;
+            left: -36px;
+            top: 5px;
+        }
+
+        .clickNon,
+        .click {
+            width: 50px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Nested Table</h1>
+        <div class="mainDiv p-5 bg-success">
+            <div class="child-row">
+                <div class="d-flex justify-content-around bg-dark  text-light" id="header1">
+                    <div class="p-2  clickNon"></div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                    <div class="p-2 col">Header 1st</div>
+                </div>
+                <!-- next row start -->
+                <div class="" id="rowWIse1">
+                    <div class="d-flex justify-content-around  text-light" id="step1">
+                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                        <div class="p-2 col">Example1 </div>
+                        <div class="p-2 col">Example2 </div>
+                        <div class="p-2 col">Example3 </div>
+                        <div class="p-2 col">Example4 </div>
+                        <div class="p-2 col">Example5 </div>
+                        <div class="p-2 col">Example6 </div>
+                        <div class="p-2 col">Example7 </div>
+                        <div class="p-2 col">Example8 </div>
+                        <div class="p-2 col">Example9 </div>
+                    </div>
+                    <!-- second child table -->
+                    <div class="childTable hidden" id="childTableHeader2">
+                        <div class="d-flex justify-content-around bg-dark  text-light child-roww2 leftBorder"
+                            id="header2">
+                            <div class="p-2  clickNon"></div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                        </div>
+                        <!-- second nest -->
+                        <div class="" id="childTableBody2">
+                            <div class="d-flex justify-content-around bg-secondary text-light child-roww2 " id="step2">
+                                <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                            </div>
+                            <!-- thhird child table -->
+                            <div class="childTable hidden" id="childTableHeader3">
+                                <div class="d-flex justify-content-around bg-dark  text-light child-roww3 leftBorder"
+                                    id="header3">
+                                    <div class="p-2  clickNon"></div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                </div>
+                                <!-- thhird nest -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- next third row in row -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- second nest row -->
+                        <div class="" id="childTableBody2">
+                            <div class="d-flex justify-content-around bg-secondary text-light child-roww2 " id="step2">
+                                <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                            </div>
+                            <!-- thhird child table -->
+                            <div class="childTable hidden" id="childTableHeader3">
+                                <div class="d-flex justify-content-around bg-dark  text-light child-roww3 leftBorder"
+                                    id="header3">
+                                    <div class="p-2  clickNon"></div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                </div>
+                                <!-- thhird nest -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- next third row in row -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--first next row start -->
+                <div class="" id="rowWIse1">
+                    <div class="d-flex justify-content-around  text-light" id="step1">
+                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                        <div class="p-2 col">Example1 </div>
+                        <div class="p-2 col">Example2 </div>
+                        <div class="p-2 col">Example3 </div>
+                        <div class="p-2 col">Example4 </div>
+                        <div class="p-2 col">Example5 </div>
+                        <div class="p-2 col">Example6 </div>
+                        <div class="p-2 col">Example7 </div>
+                        <div class="p-2 col">Example8 </div>
+                        <div class="p-2 col">Example9 </div>
+                    </div>
+                    <!-- second child table -->
+                    <div class="childTable hidden" id="childTableHeader2">
+                        <div class="d-flex justify-content-around bg-dark  text-light child-roww2 leftBorder"
+                            id="header2">
+                            <div class="p-2  clickNon"></div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                            <div class="p-2 col">Header 2nd</div>
+                        </div>
+                        <!-- second nest -->
+                        <div class="" id="childTableBody2">
+                            <div class="d-flex justify-content-around bg-secondary text-light child-roww2 " id="step2">
+                                <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                            </div>
+                            <!-- thhird child table -->
+                            <div class="childTable hidden" id="childTableHeader3">
+                                <div class="d-flex justify-content-around bg-dark  text-light child-roww3 leftBorder"
+                                    id="header3">
+                                    <div class="p-2  clickNon"></div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                </div>
+                                <!-- thhird nest -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- next third row in row -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- second nest row -->
+                        <div class="" id="childTableBody2">
+                            <div class="d-flex justify-content-around bg-secondary text-light child-roww2 " id="step2">
+                                <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                                <div class="p-2 ">Step2 </div>
+                            </div>
+                            <!-- thhird child table -->
+                            <div class="childTable hidden" id="childTableHeader3">
+                                <div class="d-flex justify-content-around bg-dark  text-light child-roww3 leftBorder"
+                                    id="header3">
+                                    <div class="p-2  clickNon"></div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                    <div class="p-2 col">Header 3rd</div>
+                                </div>
+                                <!-- thhird nest -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- next third row in row -->
+                                <div class="" id="childTableBody3">
+                                    <div class="d-flex justify-content-around bg-primary text-light child-roww3 "
+                                        id="step3">
+                                        <div class="p-2  click"><i class="fas fa-caret-right"></i> </div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                        <div class="p-2 ">Step 3rd</div>
+                                    </div>
+                                    <!-- forth child table -->
+                                    <div class="childTable hidden" id="childTableHeader4">
+                                        <div class="d-flex justify-content-around bg-dark  text-light child-roww4 leftBorder"
+                                            id="header4">
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                            <div class="p-2 col">Header 4th</div>
+                                        </div>
+                                        <!-- forth nest -->
+                                        <div class="" id="childTableBody4">
+
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+                                            <div class="d-flex justify-content-around bg-warning text-light child-roww4 "
+                                                id="step3">
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                                <div class="p-2 ">Step 4th</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".click").click(function () {
+                // $(this).closest('.child-row').toggleClass('active');
+                $(this).parent('div').next('div').toggleClass('hidden');
+                $(this).children().toggleClass('rot90');
+            });
+        });
+    </script>
+</body>
+
+</html>
